@@ -1,0 +1,34 @@
+here
+name:Node.js CI
+
+on:
+  push:
+  branches
+    -main
+pull_request:
+braches:
+  -main
+
+jobs:
+  build:
+
+    runs-on:ubuntu-lastest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+    - name: checkout respository
+      uses: actions/checkout@v3
+
+    - name: set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version
+
+    - name: Install dependencies
+       run:npm install
+
+    - name: start application
+      run: npm start￼Enter
